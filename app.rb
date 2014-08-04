@@ -20,7 +20,9 @@ class App < Sinatra::Application
   end
 
   get '/team' do
-  	erb :team
+  	erb :team, :layout => false do
+      erb :team
+    end
   end
 
   get '/awesome' do
