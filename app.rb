@@ -31,8 +31,10 @@ class App < Sinatra::Application
     end
   end
 
-  get 'credits' do
-    erb :credits
+  get '/credits' do
+    erb :credits, :layout => false do
+      erb :credits
+    end
   end
 
 end
