@@ -4,7 +4,9 @@ Bundler.require
 class App < Sinatra::Application
 	
   get '/' do
-    erb :layout
+    erb :index, :layout => false do
+      erb :index
+    end
   end
 
   get '/simplicity' do
@@ -32,9 +34,6 @@ class App < Sinatra::Application
   end
 
   get '/credits' do
-    erb :credits, :layout => false do
-      erb :credits
-    end
+    erb :credits
   end
-
 end
