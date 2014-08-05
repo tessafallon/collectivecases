@@ -11,7 +11,7 @@ class App < Sinatra::Application
   	erb :simplicity
   end
 
-  get 'interactivity' do
+  get '/interactivity' do
     erb :interactivity
   end
 
